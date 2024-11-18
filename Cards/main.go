@@ -4,21 +4,15 @@ import "fmt"
 
 func main() {
 
-	// array - (fixed length)
+	var numbers = []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 
-	var numbers = [5]int{1, 2, 3, 4, 5}
-	fmt.Println(numbers)
-
-	// slice - (dynamic array / list)
-	var StringNumbers = []string{"1", "2"}
-	fmt.Println(StringNumbers)
-
-	// append function
-	StringNumbers = append(StringNumbers, "3", "4", "5")
-
-	// numbers = append(numbers, 3, 4, 5) - cannot append to arrays (fixed size)
-	fmt.Println(StringNumbers)
-	fmt.Println(StringNumbers[0:1]) // gets the elements from posistion 0 - 1 but not including
-	fmt.Println(StringNumbers[1:])  // arguments omitted default to either (start) or (length)
-
+	// loops are created using for and the range keywords
+	// when ranging over a slice, array or map 2 values are returned
+	// for each iteration First(index) Second(copy of the element at the index)
+	for index, number := range numbers {
+		fmt.Println(index, number)
+	}
+	// for _, number := range numbers {
+	// 	fmt.Println(number)
+	// }
 }
