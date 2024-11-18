@@ -4,18 +4,21 @@ import "fmt"
 
 func main() {
 
-	card := newCard()
+	// array - (fixed length)
 
-	fmt.Println(card)
-}
+	var numbers = [5]int{1, 2, 3, 4, 5}
+	fmt.Println(numbers)
 
-// Syntax
-// defines as a function || define the name || defines return type || function body
-func newCard() string {
-	return "this is a new card"
-}
-func newCardDeck() int {
-	return 52
-}
+	// slice - (dynamic array / list)
+	var StringNumbers = []string{"1", "2"}
+	fmt.Println(StringNumbers)
 
-// functions can be called from other files if they are in the same package
+	// append function
+	StringNumbers = append(StringNumbers, "3", "4", "5")
+
+	// numbers = append(numbers, 3, 4, 5) - cannot append to arrays (fixed size)
+	fmt.Println(StringNumbers)
+	fmt.Println(StringNumbers[0:1]) // gets the elements from posistion 0 - 1 but not including
+	fmt.Println(StringNumbers[1:])  // arguments omitted default to either (start) or (length)
+
+}
