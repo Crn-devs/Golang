@@ -2,8 +2,8 @@ package main
 
 func main() {
 
-	playingCards := newDeckFromFile("playing")
-
+	playingCards := newDeckFromFile("playing_cards")
+	// playingCards.shuffle()
 	playingCards.print()
 
 }
