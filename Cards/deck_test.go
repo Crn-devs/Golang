@@ -13,6 +13,6 @@ func TestNewDeck(t *testing.T) {
 		t.Errorf("Expected Ace of Spades but got: %v", d[0])
 	}
 	if d[len(d)-1] != "King of Clubs" {
-		t.Errorf("Expected Ace of Spades but got: %v", d[len(d)-1])
+		t.Errorf("Expected King of Clubs but got: %v", d[len(d)-1])
 	}
 }
