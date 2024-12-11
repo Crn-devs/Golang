@@ -76,3 +76,14 @@ func (d deck) shuffle() {
 		d[i], d[newPosition] = d[newPosition], d[i]
 	}
 }
+
+func countHand(hand deck) int {
+
+	c1, c2 := hand[0], hand[1]
+
+	card := strings.Split(c1, " ")
+	card2 := strings.Split(c2, " ")
+
+	fmt.Println(card[0], card2[0])
+	return 1
+}

@@ -5,4 +5,7 @@ func main() {
 	// playingCards.shuffle()
 	playingCards.print()
 
+	hand, _ := deal(playingCards, 2)
+	countHand(hand)
+
 }

@@ -22,17 +22,17 @@ func TestNewDeck(t *testing.T) {
 
 func TestSaveDeckToFileAndNewDeckFromFile(t *testing.T) {
 
-	// remove any test file if it exists
 	os.Remove("_deckTesting")
-	// try to create a deck
+
 	deck := newDeck()
-	// save the deck to a file
+
 	deck.saveDeckToFile("_deckTesting")
-	// read deck from test file
+
 	loadedDeck := newDeckFromFile("_deckTesting")
+
 	if len(loadedDeck) != len(deck) {
 		t.Errorf("expected a deck of length: %v but got length:%v", len(deck), len(loadedDeck))
 	}
-	// remove the file
+
 	os.Remove("_deckTesting")
 }
